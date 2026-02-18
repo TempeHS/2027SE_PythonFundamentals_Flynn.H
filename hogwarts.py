@@ -1,6 +1,9 @@
 students = [
-    {"name": "hermione", "house": "Gryffindor", "Patronus": "Otter"}
-    {"name": "Harry",  "house": "Gryffindor", "patronus": "stag"}
-    {"name": "Ron", "house": "Gryffindor", "patronus": "Jack Russel Terrier"},
-    {"name": "Draco", "House": "Slytherin", "Patronus": None}
+    {"name": "Hermione", "House": "Gryffindor", "Patronus": "Otter"},
+    {"name": "Harry", "House": "Gryffindor", "Patronus": "Stag"},
+    {"name": "Ron", "House": "Gryffindor", "Patronus": "Jack Russel Terrier"},
+    {"name": "Draco", "House": "Slytherin", "Patronus": None},
 ]
+
+for student in students:
+    print(student["name"], student["House"], student["Patronus"], sep=", ")
