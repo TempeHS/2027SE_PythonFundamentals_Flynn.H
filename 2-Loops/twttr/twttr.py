@@ -1,5 +1,5 @@
 def main():
-    text = input("enter your text")
+    text = input("enter your text: ")
     text = vowel_remover(text)
     print(text)
 

@@ -1,4 +1,4 @@
-# get input from user
+
 def main():
     camelCase = input("Enter camelCase: ")
     snakecase = snake_case(camelCase)
@@ -18,11 +18,3 @@ def snake_case(camelCase):
 
 main()
 
-
-# loop to see if character is uppercase
-
-# if character is uppercase add underscore before it
-
-# make lowercase
-
-# print
