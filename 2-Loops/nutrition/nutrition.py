@@ -23,4 +23,4 @@ fruits = {
 
 selection = input("select fruit: ").title()
 if selection in fruits:
-    print(fruits[selection])
+    print(fruits[selection], "Calories")
