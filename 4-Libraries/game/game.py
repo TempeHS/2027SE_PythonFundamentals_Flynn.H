@@ -9,38 +9,28 @@ def main():
             break
         except ValueError:
             print("You must enter an integer!")
-
     while True:
         try:
-            while True:
-                try:
-                    guess = int(input("enter guess: "))
-                    break
-                except ValueError:
-                    print("must be an interger")
+            guess = int(input("enter guess: "))
+
             if guess == number:
                 print("You did it!")
                 break
-            elif guess != number:
-                raise SyntaxError
-        except SyntaxError:
-            if guess > number:
+            elif guess > number:
                 print("Lower!")
-
             else:
-                print("higher")
+                print("higher!")
+
+        except ValueError:
+            print("must be an integer")
 
 
 def num_check():
     while True:
-        try:
-
-            n = int(input("enter level "))
-            if not n > 0:
-                raise SyntaxError
-        except SyntaxError:
+        n = int(input("enter level "))
+        if not n > 0:
             print("number must be more than 0")
-        if n > 0:
+        elif n > 0:
             break
     return n
 
