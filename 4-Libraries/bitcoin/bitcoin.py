@@ -25,10 +25,11 @@ def get_bitcoin():
 
 
 def get_n():
+
     try:
         n = float(sys.argv[1])
         return n
-    except ValueError:
+    except (ValueError, IndexError):
         sys.exit("Error: please enter a number")
 
 

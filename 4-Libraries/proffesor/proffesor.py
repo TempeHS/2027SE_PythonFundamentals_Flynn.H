@@ -1,6 +1,14 @@
 import random
 
 
+def main():
+    total = 10
+    level = get_level()
+    for i in range(10):
+        total = question_asker(total, level)
+    print("total is", total, "/ 10")
+
+
 def get_level():
     while True:
         try:
@@ -52,14 +60,6 @@ def generate_integer(level):
     n = (10**level) - 1
     n = random.randint(1, n)
     return n
-
-
-def main():
-    total = 10
-    level = get_level()
-    for i in range(10):
-        total = question_asker(total, level)
-    print("total is", total, "/ 10")
 
 
 main()
