@@ -1,0 +1,8 @@
+name,department,amount
+Alice,Engineering,120.50
+Bob,Marketing,340.00
+Alice,Engineering,80.00
+Charlie,Marketing,210.75
+Bob,Marketing,95.20
+Diana,Engineering,540.00
+Charlie,Marketing,60.00

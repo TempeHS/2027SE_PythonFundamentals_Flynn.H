@@ -2,7 +2,6 @@ def main():
     nstudents = 0
     scores = {}
     total = 0
-    largest = ()
     filename = input("enter filename: ")
     with open("scores.txt", "r") as infile, open(filename, "w") as outfile:
         for row in infile:
