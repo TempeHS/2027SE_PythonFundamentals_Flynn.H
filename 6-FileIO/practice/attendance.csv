@@ -1,0 +1,13 @@
+name,date,status
+Alice,2024-01-01,present
+Bob,2024-01-01,absent
+Charlie,2024-01-01,present
+Alice,2024-01-02,absent
+Bob,2024-01-02,present
+Charlie,2024-01-02,present
+Alice,2024-01-03,present
+Bob,2024-01-03,absent
+Charlie,2024-01-03,late
+Alice,2024-01-04,late
+Bob,2024-01-04,present
+Charlie,2024-01-04,absent
