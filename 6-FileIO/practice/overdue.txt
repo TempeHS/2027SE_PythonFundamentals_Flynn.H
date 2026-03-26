@@ -1,0 +1,19 @@
+Charlie - To Kill a Mockingbird: 7 days overdue, $3.5 fine
+Bob - Dune: 1 day overdue, $0.5 fine
+Eve - Brave New World: 16 days overdue, $8.0 fine
+Grace - Lord of the Flies: 4 days overdue, $2.0 fine
+Isla - The Hobbit: 11 days overdue, $5.5 fine
+Karen - Jane Eyre: 2 days overdue, $1.0 fine
+Mia - The Odyssey: 8 days overdue, $4.0 fine
+Olivia - War and Peace: 17 days overdue, $8.5 fine
+Quinn - The Brothers Karamazov: 5 days overdue, $2.5 fine
+Sam - Hamlet: 3 days overdue, $1.5 fine
+Uma - Romeo and Juliet: 6 days overdue, $3.0 fine
+Wendy - Dracula: 12 days overdue, $6.0 fine
+Yara - The Picture of Dorian Gray: 1 day overdue, $0.5 fine
+Aaron - Great Expectations: 9 days overdue, $4.5 fine
+Carl - The Count of Monte Cristo: 14 days overdue, $7.0 fine
+Ethan - The Divine Comedy: 19 days overdue, $9.5 fine
+George - Ulysses: 2 days overdue, $1.0 fine
+Ivan - For Whom the Bell Tolls: 5 days overdue, $2.5 fine
+Kevin - The Old Man and the Sea: 10 days overdue, $5.0 fine

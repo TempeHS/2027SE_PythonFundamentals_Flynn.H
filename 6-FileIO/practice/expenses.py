@@ -5,7 +5,6 @@ def main():
     total = {}
     infilename = "expenses.txt"
     outfilename = input("enter outfile: ").strip()
-
     with open(infilename, "r") as infile, open(outfilename, "w") as outfile:
         reader = csv.DictReader(infile)
         for row in reader:
