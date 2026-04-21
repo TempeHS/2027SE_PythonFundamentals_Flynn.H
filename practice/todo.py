@@ -1,5 +1,6 @@
 import csv
 import sys
+import bcrypt
 
 
 def main():
@@ -25,7 +26,7 @@ def main():
 def menu(user):
     while True:
         request = input(
-            f"| add task | remove task | complete task | view list | exit | \n"
+            f"| add task | remove task | complete task | view list | logout | exit | \n"
         ).lower()
         if request == "add task":
             add_task(user)
@@ -40,6 +41,9 @@ def menu(user):
             print("Task removed successfully")
         elif request == "complete task":
             complete_task(user)
+        elif request == "logout":
+            print("Logged out successfully!")
+            return
         elif request == "exit":
             sys.exit("Goodbye!")
 
@@ -71,6 +75,14 @@ def complete_task(user):
                     }
                 )
             else:
+                writer.writerow(
+                    {
+                        "num": row["num"],
+                        "name": row["name"],
+                        "desc": row["desc"],
+                        "status": row["status"],
+                    }
+                )
                 print("Task is already completed!")
 
     with open(f"{user}tasks.csv", "w") as write, open("temp.csv", "r") as temp:
@@ -137,9 +149,15 @@ def add_task(user):
     with open(f"{user}tasks.csv", "r") as file:
         num_lines = 0
         for row in file:
-            if not row == "num,name,desc,status" or "":
-                num_lines += 1
+            row = row.strip()
 
+            if row == "":
+                continue
+
+            if row == "num,name,desc,status":
+                continue
+
+            num_lines += 1
     taskname = input("Enter name for task: ")
     task_desc = input("enter task description: ")
     with open(f"{user}tasks.csv", "a") as file:
@@ -157,24 +175,36 @@ def add_task(user):
 
 def create_account():
     username = input("Enter username: ")
-    password = input("Enter password; ")
+    password = input("Enter password: ")
+    password = password.encode("utf-8")
+    hashed = bcrypt.hashpw(password, bcrypt.gensalt())
+
+    try:
+        with open("Details.csv", "r") as file:
+            pass
+    except FileNotFoundError:
+        with open("Details.csv", "w") as file:
+            writer = csv.DictWriter(file, fieldnames=("user", "password"))
+            writer.writeheader()
+
     with open("Details.csv", "a") as file:
         writer = csv.DictWriter(file, fieldnames=("user", "password"))
+        writer.writerow({"user": username, "password": hashed.decode("utf-8")})
 
-        writer.writerow({"user": username, "password": password})
     with open(f"{username}tasks.csv", "w") as file:
         writer = csv.DictWriter(file, fieldnames=("num", "name", "desc", "status"))
         writer.writeheader()
 
 
 def login(user, password):
-
+    password = password.encode("utf-8")
     with open("Details.csv", "r") as file:
         reader = csv.DictReader(file)
         is_valid = False
         for row in reader:
+            saved = row["password"].encode("utf-8")
             if user == row["user"]:
-                if password == row["password"]:
+                if bcrypt.checkpw(password, saved):
                     is_valid = True
     return is_valid
 
