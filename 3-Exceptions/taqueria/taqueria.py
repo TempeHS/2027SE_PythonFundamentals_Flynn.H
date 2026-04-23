@@ -31,7 +31,7 @@ def main():
                 print("$", total)
         except EOFError:
             print()
-            print("Your total is: ", total)
+            print("Your total is:", total)
             break
 
 
