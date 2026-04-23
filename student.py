@@ -1,12 +1,17 @@
+class Student: ...
+
+
 def main():
-    name = get_name()
-    house = get_house()
-    print(f"{name} from {house}")
+    student = get_student()
+
+    print(f"{student.name} from {student.house}")
 
 
 def get_student():
-    name = input("Name: ")
-    house = input("House: ")
+    student = Student()
+    student.name = input("Name: ")
+    student.house = input("House: ")
+    return student
 
 
 if __name__ == "__main__":
