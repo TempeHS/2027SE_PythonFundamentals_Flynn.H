@@ -13,10 +13,10 @@ class Student:
         return self._name
 
     @name.setter
-    def name(self, house):
+    def name(self, name):
         if not name:
-            raise ValueError("Invalid house")
-        self._house = house
+            raise ValueError("Missing name")
+        self._name = name
 
     @property
     def house(self):
